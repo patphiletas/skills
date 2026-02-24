@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Compétences - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Mes compétences</h1>
+
+    <section>
+        <form class="skill-form" data-category="1">
+            <h2>Backend</h2>
+            <input type="text" placeholder="Nom (ex: PHP)" class="skill-name" required>
+            <input type="range" min="0" max="100" value="50" class="skill-level">
+            <span class="range-value">50%</span>
+            <button type="submit">Ajouter</button>
+        </form>
+        <ul id="backend-list"></ul>
+    </section>
+
+    <hr>
+
+    <section>
+        <form class="skill-form" data-category="2">
+            <h2>Frontend</h2>
+            <input type="text" placeholder="Nom (ex: React)" class="skill-name" required>
+            <input type="range" min="0" max="100" value="50" class="skill-level">
+            <span class="range-value">50%</span>
+            <button type="submit">Ajouter</button>
+        </form>
+        <ul id="frontend-list"></ul>
+    </section>
+
+    <hr>
+
+    <section>
+        <form class="skill-form" data-category="3">
+            <h2>Graphisme</h2>
+            <input type="text" placeholder="Nom (ex: Photoshop)" class="skill-name" required>
+            <input type="range" min="0" max="100" value="50" class="skill-level">
+            <span class="range-value">50%</span>
+            <button type="submit">Ajouter</button>
+        </form>
+        <ul id="graphisme-list"></ul>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
