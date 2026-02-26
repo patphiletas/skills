@@ -1,4 +1,7 @@
-const API_URL = "http://localhost:3000";
+const API_URL =
+  window.location.hostname === "localhost"
+    ? "http://localhost:3000"
+    : "https://skills-x33b.onrender.com";
 
 // --- 1. CHARGEMENT DES DONNÉES ---
 async function chargerCompetences() {
