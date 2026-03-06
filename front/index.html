@@ -7,45 +7,70 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <main class="app">
+        <header class="hero">
+            <h1>Mes compétences</h1>
+            <p class="hero-subtitle">
+                Renseignez une compétence, choisissez un niveau (0 à 100), puis cliquez sur "Ajouter".
+                Vous pouvez supprimer une ligne à tout moment avec le bouton "Supprimer".
+            </p>
+        </header>
 
-    <h1>Mes compétences</h1>
+        <p class="status-message" id="status-message" aria-live="polite"></p>
 
-    <section>
-        <form class="skill-form" data-category="1">
-            <h2>Backend</h2>
-            <input type="text" placeholder="Nom (ex: PHP)" class="skill-name" required>
-            <input type="range" min="0" max="100" value="50" class="skill-level">
-            <span class="range-value">50%</span>
-            <button type="submit">Ajouter</button>
-        </form>
-        <ul id="backend-list"></ul>
-    </section>
+        <div class="sections-grid">
+            <section class="skill-section">
+                <form class="skill-form" data-category="1">
+                    <h2>Backend</h2>
+                    <label>
+                        Compétence
+                        <input type="text" placeholder="Ex: Node.js, PHP, PostgreSQL" class="skill-name" required minlength="2" maxlength="40">
+                    </label>
+                    <label class="level-label">
+                        Niveau
+                        <input type="range" min="0" max="100" value="50" class="skill-level">
+                        <span class="range-value">50%</span>
+                    </label>
+                    <button type="submit">Ajouter</button>
+                </form>
+                <ul id="backend-list"></ul>
+            </section>
 
-    <hr>
+            <section class="skill-section">
+                <form class="skill-form" data-category="2">
+                    <h2>Frontend</h2>
+                    <label>
+                        Compétence
+                        <input type="text" placeholder="Ex: React, HTML/CSS, Vue" class="skill-name" required minlength="2" maxlength="40">
+                    </label>
+                    <label class="level-label">
+                        Niveau
+                        <input type="range" min="0" max="100" value="50" class="skill-level">
+                        <span class="range-value">50%</span>
+                    </label>
+                    <button type="submit">Ajouter</button>
+                </form>
+                <ul id="frontend-list"></ul>
+            </section>
 
-    <section>
-        <form class="skill-form" data-category="2">
-            <h2>Frontend</h2>
-            <input type="text" placeholder="Nom (ex: React)" class="skill-name" required>
-            <input type="range" min="0" max="100" value="50" class="skill-level">
-            <span class="range-value">50%</span>
-            <button type="submit">Ajouter</button>
-        </form>
-        <ul id="frontend-list"></ul>
-    </section>
-
-    <hr>
-
-    <section>
-        <form class="skill-form" data-category="3">
-            <h2>Graphisme</h2>
-            <input type="text" placeholder="Nom (ex: Photoshop)" class="skill-name" required>
-            <input type="range" min="0" max="100" value="50" class="skill-level">
-            <span class="range-value">50%</span>
-            <button type="submit">Ajouter</button>
-        </form>
-        <ul id="graphisme-list"></ul>
-    </section>
+            <section class="skill-section">
+                <form class="skill-form" data-category="3">
+                    <h2>Graphisme</h2>
+                    <label>
+                        Compétence
+                        <input type="text" placeholder="Ex: Photoshop, Illustrator, Figma" class="skill-name" required minlength="2" maxlength="40">
+                    </label>
+                    <label class="level-label">
+                        Niveau
+                        <input type="range" min="0" max="100" value="50" class="skill-level">
+                        <span class="range-value">50%</span>
+                    </label>
+                    <button type="submit">Ajouter</button>
+                </form>
+                <ul id="graphisme-list"></ul>
+            </section>
+        </div>
+    </main>
 
     <script src="script.js"></script>
 </body>
